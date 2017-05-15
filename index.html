@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Bootstrap 4 Notifications Sample</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+
+  <!-- Bootstrap 4 Notifications Sample -->
+  <link rel="stylesheet" href="bootstrap-4-notifications-sample.css">
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar fixed-top navbar-light bg-faded">
+
+    <!-- ICON -->
+    <div class="dropdown nav-button notifications-button hidden-sm-down">
+
+      <a class="btn btn-secondary dropdown-toggle" href="#" id="notifications-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i id="notificationsIcon" class="fa fa-bell-o" aria-hidden="true"></i>
+        <span id="notificationsBadge" class="badge badge-danger"><i class="fa fa-spinner fa-pulse fa-fw" aria-hidden="true"></i></span>
+      </a>
+
+      <!-- NOTIFICATIONS -->
+      <div class="dropdown-menu notification-dropdown-menu" aria-labelledby="notifications-dropdown">
+        <h6 class="dropdown-header">Notifications</h6>
+
+        <!-- CHARGEMENT -->
+        <a id="notificationsLoader" class="dropdown-item dropdown-notification" href="#">
+          <p class="notification-solo text-center"><i id="notificationsIcon" class="fa fa-spinner fa-pulse fa-fw" aria-hidden="true"></i> Chargement des dernières notifications...</p>
+        </a>
+
+        <div id="notificationsContainer" class="notifications-container"></div>
+
+        <!-- AUCUNE NOTIFICATION -->
+        <a id="notificationAucune" class="dropdown-item dropdown-notification" href="#">
+          <p class="notification-solo text-center">Aucune nouvelle notification</p>
+        </a>
+
+        <!-- TOUTES -->
+        <a class="dropdown-item dropdown-notification-all" href="#">
+          Voir toutes les notifications
+        </a>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+  <!-- TEMPLATE NOTIFICATION -->
+  <script id="notificationTemplate" type="text/html">
+    <!-- NOTIFICATION -->
+    <a class="dropdown-item dropdown-notification" href="{{href}}">
+      <div class="notification-read">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </div>
+      <img class="notification-img" src="https://placehold.it/48x48" alt="Icone Notification" />
+      <div class="notifications-body">
+        <p class="notification-texte">{{texte}}</p>
+        <p class="notification-date text-muted">
+          <i class="fa fa-clock-o" aria-hidden="true"></i> {{date}}
+        </p>
+      </div>
+    </a>
+  </script>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+  <!-- Tether -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+  <!-- Font-Awesome -->
+  <script src="https://use.fontawesome.com/48bbc759d5.js"></script>
+
+  <!-- Bootstrap 4 Notifications Sample -->
+  <script src="bootstrap-4-notifications-sample.js"></script>
+
+</body>
+
+</html>
