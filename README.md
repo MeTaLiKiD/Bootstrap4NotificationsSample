@@ -1,2 +1,1 @@
-# bootstrap-4-notifications-sample
-Dropdown menu with notifications list for Bootstrap 4, with working JavaScript
++![Demo GIF](https://raw.githubusercontent.com/MeTaLiKiD/Bootstrap4NotificationsSample/master/Demo.gif)
